@@ -7,7 +7,7 @@
         I'm a Front End Dev
       </h1>
 
-      <div class="flex justify-evenly border-b border-white pb-4 mb-4">
+      <div class="flex justify-evenly border-b border-white pb-4 mb-4 max-md:flex-wrap gap-3">
         <h5
           :class="[
             '2xl:text-2xl',
@@ -28,7 +28,7 @@
           {{ lang.lang }}
         </h5>
       </div>
-      <div class="flex mx-4">
+      <div class="flex mx-4 max-md:flex-col-reverse gap-3  ">
         <div class="flex-1" ref="educationRef">
           <h2>Education :</h2>
           <ul class="flex flex-col gap-3 mt-3">
@@ -87,8 +87,8 @@
     <footer>
       <hr class="my-5" />
       <h5 class="w-full text-center">Contact Me</h5>
-      <div class="flex justify-evenly">
-        <p
+      <div class="flex justify-evenly max-md:flex-col items-center">
+        <a :href="'https://wa.me/+6285156771750'" target="_blank"
           :class="[
             '2xl:text-2xl',
             'hover:grayscale-0',
@@ -97,12 +97,13 @@
             'gap-3',
             'cursor-pointer',
             'hover:text-white',
-            number % 2 ? 'grayscale-0 text-white' : 'text-gray-300 grayscale',
+            'grayscale'
           ]"
         >
           <Icon icon="logos:whatsapp-icon" /> +62 851 5677 1750
-        </p>
-        <p
+        </a>
+        <a
+         :href="'mailto:khamalapp@gmail.com'"  target="_blank"
           :class="[
             '2xl:text-2xl',
             'hover:grayscale-0',
@@ -111,14 +112,13 @@
             'gap-3',
             'cursor-pointer',
             'hover:text-white',
-            (number - 1) % 2
-              ? 'grayscale-0 text-white'
-              : 'text-gray-300 grayscale',
+             'grayscale'
+        
           ]"
         >
           <Icon class="text-red-500" icon="clarity:email-solid" />
           khamalapp@gmail.com
-        </p>
+        </a>
       </div>
     </footer>
   </div>
